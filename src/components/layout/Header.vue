@@ -28,7 +28,7 @@ export default {
 }
 .header h1 {
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 20px;
   float: left;
 }
 #nav {
