@@ -1,9 +1,11 @@
 <template>
   <header class="header">
-    <h1>TodoList</h1>
-    <div id="nav">
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
+    <div class="container">
+      <h1>TodoList</h1>
+      <div id="nav">
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+      </div>
     </div>
   </header>
 </template>
@@ -26,6 +28,11 @@ export default {
   height: 60px;
   line-height: 60px;
 }
+.container {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+}
 .header h1 {
   padding: 0;
   margin: 0 0 0 20px;
@@ -34,7 +41,8 @@ export default {
 #nav {
   float: right;
   padding: 0;
-  margin-right: 20px;
+  position: absolute;
+  right: 20px;
 }
 #nav a {
   color: #fff;

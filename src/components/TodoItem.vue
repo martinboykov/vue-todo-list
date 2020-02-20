@@ -44,6 +44,7 @@ export default {
   float: right;
   outline: none;
 }
+
 .is-complete {
   text-decoration: line-through;
 }

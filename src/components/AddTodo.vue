@@ -41,6 +41,14 @@ export default {
 .container {
   padding: 20px 0;
 }
+
+form {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 20px;
+}
 input {
   outline: none;
 }
@@ -49,6 +57,7 @@ input[type="text"] {
   height: 40px;
   border-radius: 0;
   border: 1px solid #000;
+  flex: 10;
 }
 input[type="text"]:focus {
   box-shadow: 0px 0px 12px -3px rgba(0, 0, 0, 0.3);
@@ -57,6 +66,8 @@ input[type="text"]:focus {
 input[type="submit"] {
   color: #fff;
   background-color: #000;
+  flex: 2;
+
 }
 input[type="submit"]:hover {
   color: #fff;
