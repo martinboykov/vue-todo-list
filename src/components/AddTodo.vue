@@ -41,7 +41,9 @@ export default {
 .container {
   padding: 20px 0;
 }
-
+input {
+  outline: none;
+}
 input[type="text"] {
   padding: 5px;
   height: 40px;
@@ -55,7 +57,6 @@ input[type="text"]:focus {
 input[type="submit"] {
   color: #fff;
   background-color: #000;
-  outline: none;
 }
 input[type="submit"]:hover {
   color: #fff;
