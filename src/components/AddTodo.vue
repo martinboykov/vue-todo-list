@@ -24,7 +24,7 @@ export default {
         completed: false
       };
       axios
-        .post("http://5e4ea1866272aa0014230dcf.mockapi.io/vue/todos", newTodo)
+        .post("https://5e4ea1866272aa0014230dcf.mockapi.io/vue/todos", newTodo)
         .then(res => {
             this.$emit("add-todo", res.data);
             // console.log(res);

@@ -27,7 +27,7 @@ export default {
   methods: {
     deleteTodo(todo) {
       axios
-        .delete(`http://5e4ea1866272aa0014230dcf.mockapi.io/vue/todos/${todo.id}`)
+        .delete(`https://5e4ea1866272aa0014230dcf.mockapi.io/vue/todos/${todo.id}`)
         .then(() => {
            this.todos.splice(todo.index, 1);
         })
@@ -40,7 +40,7 @@ export default {
 
   created() {
     axios
-      .get("http://5e4ea1866272aa0014230dcf.mockapi.io/vue/todos")
+      .get("https://5e4ea1866272aa0014230dcf.mockapi.io/vue/todos")
       .then((res) => {
         this.todos = res.data;
       })
@@ -77,7 +77,6 @@ body {
   color: #fff;
   padding: 0 20px;
   height: 40px;
-  line-height: 40px;
   cursor: pointer;
 }
 
