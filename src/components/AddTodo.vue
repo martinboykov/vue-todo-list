@@ -26,8 +26,8 @@ export default {
       axios
         .post("https://5e4ea1866272aa0014230dcf.mockapi.io/vue/todos", newTodo)
         .then(res => {
-            this.$emit("add-todo", res.data);
-            // console.log(res);
+          this.$emit("add-todo", res.data);
+          // console.log(res);
         })
         .catch(err => console.log(err));
 
@@ -41,18 +41,25 @@ export default {
 .container {
   padding: 20px 0;
 }
-form {
-  /* display: flex; */
-}
+
 input[type="text"] {
-  flex: 10;
   padding: 5px;
   height: 40px;
-  transform: translateX(2px);
   border-radius: 0;
+  border: 1px solid #000;
+}
+input[type="text"]:focus {
+  box-shadow: 0px 0px 12px -3px rgba(0, 0, 0, 0.3);
 }
 
 input[type="submit"] {
-  flex: 3;
+  color: #fff;
+  background-color: #000;
+  outline: none;
+}
+input[type="submit"]:hover {
+  color: #fff;
+  background-color: #000;
+  opacity: 0.8;
 }
 </style>
