@@ -58,10 +58,11 @@ export default {
   clear: both;
   display: table;
 }
-.checkbox-group::after {
-  content: "";
-  clear: both;
-  display: table;
+.checkbox-group {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 .checkbox-group input {
   display: none;
@@ -69,21 +70,24 @@ export default {
 .checkbox-group label.checkbox {
   font-size: 20px;
   color: #303030;
-  padding: 0 0 0 35px;
+  padding: 0 20px 0 35px;
   position: relative;
   display: block;
   cursor: pointer;
   user-select: none;
   text-align: left;
-  float: left;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
 .checkbox-group label.checkbox .checkmark {
   position: absolute;
-  top: 3px;
+  top: 50%;
   left: 0;
   height: 20px;
   width: 20px;
+  transform: translateY(-50%);
   border: 2px solid #303030;
 }
 .checkbox-group label.checkbox .checkmark:after {

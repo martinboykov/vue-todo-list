@@ -66,7 +66,7 @@ input[type="text"]:focus {
 input[type="submit"] {
   color: #fff;
   background-color: #000;
-  flex: 2;
+  flex: 3;
 
 }
 input[type="submit"]:hover {
