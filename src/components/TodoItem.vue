@@ -2,7 +2,7 @@
   <div class="todo-item">
     <div class="checkbox-group">
       <label class="checkbox privacy-label" v-bind:class="{'is-complete': todo.completed}">
-       {{todo.title}}
+        {{todo.title}}
         <input type="checkbox" v-on:change="markComplete" :checked="todo.completed" />
         <span class="checkmark"></span>
       </label>
@@ -12,12 +12,21 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "TodoItem",
   props: ["todo"],
   methods: {
     markComplete() {
       this.todo.completed = !this.todo.completed;
+      console.log(this.todo.completed);
+      axios
+        .put(
+          `https://5e4ea1866272aa0014230dcf.mockapi.io/vue/todos/${this.todo.id}`,
+          this.todo
+        )
+        .then()
+        .catch(err => console.log(err));
     }
   }
 };
@@ -82,8 +91,8 @@ export default {
   position: absolute;
   left: 5px;
   top: 1px;
-  width: 6px;
-  height: 10px;
+  width: 4px;
+  height: 8px;
   border: solid #303030;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
